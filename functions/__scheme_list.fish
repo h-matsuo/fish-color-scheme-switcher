@@ -1,4 +1,4 @@
-function __scheme_get_list \
+function __scheme_list \
   -d 'Get list of available color schemes'
 
   set -l repo_path "$HOME/.config/fish/functions/"

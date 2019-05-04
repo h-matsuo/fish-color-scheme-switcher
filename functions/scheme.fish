@@ -18,7 +18,7 @@ function scheme \
     print_usage
     return 1
   else if [ $subcommand = 'list' ]; or [ $subcommand = 'ls' ]
-    __scheme_get_list
+    __scheme_list
   else if [ $subcommand = 'set' ]
     __scheme_set $scheme_name
       or return $status
