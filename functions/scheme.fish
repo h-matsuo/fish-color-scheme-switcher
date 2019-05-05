@@ -1,18 +1,18 @@
 function print_usage
-  set_color $fish_color_normal
-  echo (set_color -o)'Usage'(set_color $fish_color_normal)':'
-  echo '   '(set_color $fish_color_command)'scheme '(set_color -o $fish_color_param)'list'(set_color $fish_color_normal)', '(set_color -o $fish_color_param)'ls'(set_color $fish_color_normal)
-  echo '       List available color schemes.'
-  echo '   '(set_color $fish_color_command)'scheme '(set_color -o $fish_color_param)'set '(set_color $fish_color_normal)(set_color -u $fish_color_param)'scheme-name'(set_color $fish_color_normal)
-  echo '       Set color scheme to '(set_color -u $fish_color_param)'scheme-name'(set_color $fish_color_normal)'.'
+  echo (set_color normal)(set_color $fish_color_normal)(set_color -o)'Usage:'(set_color normal)
+  echo '   '(set_color $fish_color_command)'scheme'(set_color normal)' '(set_color $fish_color_param)(set_color -o)'list'(set_color normal)(set_color $fish_color_normal)','(set_color normal)' '(set_color $fish_color_param)(set_color -o)'ls'(set_color normal)
+  echo '       '(set_color $fish_color_normal)'List available color schemes.'(set_color normal)
+  echo '   '(set_color $fish_color_command)'scheme'(set_color normal)' '(set_color $fish_color_param)(set_color -o)'preview'(set_color normal)' '(set_color normal)(set_color $fish_color_normal)'['(set_color normal)(set_color $fish_color_param)(set_color -u)'scheme-name'(set_color normal)(set_color $fish_color_normal)']'(set_color normal)
+  echo '       '(set_color $fish_color_normal)'Preview the color scheme of '(set_color normal)(set_color $fish_color_param)(set_color -u)'scheme-name'(set_color normal)(set_color $fish_color_normal)'.'(set_color normal)
+  echo '       '(set_color $fish_color_normal)'If '(set_color normal)(set_color $fish_color_param)(set_color -u)'scheme-name'(set_color normal)(set_color $fish_color_normal)' is empty, preview the current scheme.'(set_color normal)
+  echo '   '(set_color $fish_color_command)'scheme'(set_color normal)' '(set_color $fish_color_param)(set_color -o)'set'(set_color normal)' '(set_color normal)(set_color $fish_color_param)(set_color -u)'scheme-name'(set_color normal)
+  echo '       '(set_color $fish_color_normal)'Set color scheme to '(set_color normal)(set_color $fish_color_param)(set_color -u)'scheme-name'(set_color normal)(set_color $fish_color_normal)'.'(set_color normal)
 end
 
 
 function scheme \
   -d 'Configure fish\'s color scheme' \
   -a subcommand scheme_name
-
-  set_color $fish_color_normal
 
   if [ -z $subcommand ]
     print_usage
@@ -25,11 +25,9 @@ function scheme \
     __scheme_set $scheme_name
       or return $status
   else
-    echo (set_color -o $fish_color_error)'Error'(set_color $fish_color_normal)': Unknown command: '(set_color $fish_color_error)$subcommand
+    echo (set_color normal)(set_color $fish_color_error)(set_color -o)'Error:'(set_color normal)' '(set_color $fish_color_normal)'Unknown command:'(set_color normal)' '(set_color $fish_color_error)$subcommand(set_color normal)
     print_usage
     return 1
   end
-
-  set_color $fish_color_normal
 
 end

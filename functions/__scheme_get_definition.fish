@@ -160,8 +160,7 @@ function __scheme_get_definition \
       # set scheme_color_history_current    --bold
 
     case '*'
-      echo (set_color -o $fish_color_error)'Error: '(set_color $fish_color_normal)'No such scheme available: '(set_color $fish_color_error)$scheme_name
-      set_color $fish_color_normal
+      echo (set_color normal)(set_color $fish_color_error)(set_color -o)'Error:'(set_color normal)' '(set_color $fish_color_normal)'No such scheme available:'(set_color normal)' '(set_color $fish_color_error)$scheme_name(set_color normal)
       return 1
 
   end

@@ -3,7 +3,7 @@ function __scheme_set \
   -a scheme_name
 
   if [ -z $scheme_name ]
-    echo (set_color -o $fish_color_error)'Error'(set_color $fish_color_normal)': Scheme name not provided.'
+    echo (set_color normal)(set_color $fish_color_error)(set_color -o)'Error:'(set_color normal)' '(set_color $fish_color_normal)'Scheme name not provided.'(set_color normal)
     return 1
   end
 
