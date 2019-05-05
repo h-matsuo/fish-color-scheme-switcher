@@ -66,6 +66,11 @@ function __scheme_get_definition \
     echo 'default'
     echo 'dracula'
     echo 'monokai'
+    echo 'solarized'
+    echo 'tomorrow'
+    echo 'tomorrow-night'
+    echo 'tomorrow-night-bright'
+    echo 'zenburn'
     return
   end
 
@@ -147,6 +152,234 @@ function __scheme_get_definition \
       set -g scheme_color_cwd_root           $red
       set -g scheme_color_autosuggestion     $comment
       set -g scheme_color_user               $orange
+      set -g scheme_color_host               $foreground
+      # set -g scheme_color_cancel             --reverse
+      # set -g scheme_color_valid_path         --underline
+      # set -g scheme_color_match              --background=brblue
+      # set -g scheme_color_selection          white --bold --background=brblack
+      # set -g scheme_color_search_match       bryellow --background=brblack
+      # set -g scheme_pager_color_prefix       white --bold --underline
+      # set -g scheme_pager_color_completion   normal
+      # set -g scheme_pager_color_description  B3A06D
+      # set -g scheme_pager_color_progress     brwhite --background=cyan
+      # set -g scheme_pager_color_secondary
+      # set -g scheme_color_history_current    --bold
+
+    # https://github.com/altercation/solarized
+    case 'solarized'
+      # Color palette
+      set -l base03         002b36
+      set -l base02         073642
+      set -l base01         586e75
+      set -l base00         657b83
+      set -l base0          839496
+      set -l base1          93a1a1
+      set -l base2          eee8d5
+      set -l base3          fdf6e3
+      set -l yellow         b58900
+      set -l orange         cb4b16
+      set -l red            dc322f
+      set -l magenta        d33682
+      set -l violet         6c71c4
+      set -l blue           268bd2
+      set -l cyan           2aa198
+      set -l green          859900
+      # Preferred to reset all colors
+      reset_scheme_to_default
+      # Color configurations
+      # set -g scheme_color_normal             normal
+      set -g scheme_color_command            $blue
+      set -g scheme_color_quote              $cyan
+      set -g scheme_color_redirection        $violet
+      set -g scheme_color_end                $green
+      set -g scheme_color_error              $red
+      set -g scheme_color_param              $base1
+      set -g scheme_color_comment            $base01
+      set -g scheme_color_operator           $yellow
+      set -g scheme_color_escape             $base00
+      set -g scheme_color_cwd                $yellow
+      set -g scheme_color_cwd_root           $red
+      set -g scheme_color_autosuggestion     $base01
+      set -g scheme_color_user               $magenta
+      set -g scheme_color_host               $base1
+      # set -g scheme_color_cancel             --reverse
+      # set -g scheme_color_valid_path         --underline
+      # set -g scheme_color_match              --background=brblue
+      # set -g scheme_color_selection          white --bold --background=brblack
+      # set -g scheme_color_search_match       bryellow --background=brblack
+      # set -g scheme_pager_color_prefix       white --bold --underline
+      # set -g scheme_pager_color_completion   normal
+      # set -g scheme_pager_color_description  B3A06D
+      # set -g scheme_pager_color_progress     brwhite --background=cyan
+      # set -g scheme_pager_color_secondary
+      # set -g scheme_color_history_current    --bold
+
+    # https://github.com/chriskempson/tomorrow-theme
+    case 'tomorrow'
+      # Color palette
+      set -l background     ffffff
+      set -l current_line   efefef
+      set -l selection      d6d6d6
+      set -l foreground     4d4d4c
+      set -l comment        8e908c
+      set -l red            c82829
+      set -l orange         f5871f
+      set -l yellow         eab700
+      set -l green          718c00
+      set -l aqua           3e999f
+      set -l blue           4271ae
+      set -l purple         8959a8
+      # Preferred to reset all colors
+      reset_scheme_to_default
+      # Color configurations
+      # set -g scheme_color_normal             normal
+      set -g scheme_color_command            $purple
+      set -g scheme_color_quote              $green
+      set -g scheme_color_redirection        $aqua
+      set -g scheme_color_end                $purple
+      set -g scheme_color_error              $red
+      set -g scheme_color_param              $blue
+      set -g scheme_color_comment            $comment
+      set -g scheme_color_operator           $orange
+      set -g scheme_color_escape             $orange
+      set -g scheme_color_cwd                $aqua
+      set -g scheme_color_cwd_root           $red
+      set -g scheme_color_autosuggestion     $comment
+      set -g scheme_color_user               $green
+      set -g scheme_color_host               $foreground
+      # set -g scheme_color_cancel             --reverse
+      # set -g scheme_color_valid_path         --underline
+      # set -g scheme_color_match              --background=brblue
+      # set -g scheme_color_selection          white --bold --background=brblack
+      # set -g scheme_color_search_match       bryellow --background=brblack
+      # set -g scheme_pager_color_prefix       white --bold --underline
+      # set -g scheme_pager_color_completion   normal
+      # set -g scheme_pager_color_description  B3A06D
+      # set -g scheme_pager_color_progress     brwhite --background=cyan
+      # set -g scheme_pager_color_secondary
+      # set -g scheme_color_history_current    --bold
+
+    # https://github.com/chriskempson/tomorrow-theme
+    case 'tomorrow-night'
+      # Color palette
+      set -l background     1d1f21
+      set -l current_line   282a2e
+      set -l selection      373b41
+      set -l foreground     c5c8c6
+      set -l comment        969896
+      set -l red            cc6666
+      set -l orange         de935f
+      set -l yellow         f0c674
+      set -l green          b5bd68
+      set -l aqua           8abeb7
+      set -l blue           81a2be
+      set -l purple         b294bb
+      # Preferred to reset all colors
+      reset_scheme_to_default
+      # Color configurations
+      # set -g scheme_color_normal             normal
+      set -g scheme_color_command            $purple
+      set -g scheme_color_quote              $green
+      set -g scheme_color_redirection        $aqua
+      set -g scheme_color_end                $purple
+      set -g scheme_color_error              $red
+      set -g scheme_color_param              $blue
+      set -g scheme_color_comment            $comment
+      set -g scheme_color_operator           $orange
+      set -g scheme_color_escape             $orange
+      set -g scheme_color_cwd                $aqua
+      set -g scheme_color_cwd_root           $red
+      set -g scheme_color_autosuggestion     $comment
+      set -g scheme_color_user               $green
+      set -g scheme_color_host               $foreground
+      # set -g scheme_color_cancel             --reverse
+      # set -g scheme_color_valid_path         --underline
+      # set -g scheme_color_match              --background=brblue
+      # set -g scheme_color_selection          white --bold --background=brblack
+      # set -g scheme_color_search_match       bryellow --background=brblack
+      # set -g scheme_pager_color_prefix       white --bold --underline
+      # set -g scheme_pager_color_completion   normal
+      # set -g scheme_pager_color_description  B3A06D
+      # set -g scheme_pager_color_progress     brwhite --background=cyan
+      # set -g scheme_pager_color_secondary
+      # set -g scheme_color_history_current    --bold
+
+    # https://github.com/chriskempson/tomorrow-theme
+    case 'tomorrow-night-bright'
+      # Color palette
+      set -l background     000000
+      set -l current_line   2a2a2a
+      set -l selection      424242
+      set -l foreground     eaeaea
+      set -l comment        969896
+      set -l red            d54e53
+      set -l orange         e78c45
+      set -l yellow         e7c547
+      set -l green          b9ca4a
+      set -l aqua           70c0b1
+      set -l blue           7aa6da
+      set -l purple         c397d8
+      # Preferred to reset all colors
+      reset_scheme_to_default
+      # Color configurations
+      # set -g scheme_color_normal             normal
+      set -g scheme_color_command            $purple
+      set -g scheme_color_quote              $green
+      set -g scheme_color_redirection        $aqua
+      set -g scheme_color_end                $purple
+      set -g scheme_color_error              $red
+      set -g scheme_color_param              $blue
+      set -g scheme_color_comment            $comment
+      set -g scheme_color_operator           $orange
+      set -g scheme_color_escape             $orange
+      set -g scheme_color_cwd                $aqua
+      set -g scheme_color_cwd_root           $red
+      set -g scheme_color_autosuggestion     $comment
+      set -g scheme_color_user               $green
+      set -g scheme_color_host               $foreground
+      # set -g scheme_color_cancel             --reverse
+      # set -g scheme_color_valid_path         --underline
+      # set -g scheme_color_match              --background=brblue
+      # set -g scheme_color_selection          white --bold --background=brblack
+      # set -g scheme_color_search_match       bryellow --background=brblack
+      # set -g scheme_pager_color_prefix       white --bold --underline
+      # set -g scheme_pager_color_completion   normal
+      # set -g scheme_pager_color_description  B3A06D
+      # set -g scheme_pager_color_progress     brwhite --background=cyan
+      # set -g scheme_pager_color_secondary
+      # set -g scheme_color_history_current    --bold
+
+    # https://github.com/jnurmine/Zenburn
+    case 'zenburn'
+      # Color palette
+      set -l background     3f3f3f
+      set -l foreground     dcdccc
+      set -l cyan           9bced2
+      set -l green          7f9f7f
+      set -l pink           d191c0
+      set -l red            cc9393
+      set -l yellow         efef8f
+      set -l orange         ffcfaf
+      set -l cream          e3ceab
+      set -l white          dfdfdf
+      set -l gray           53606e
+      # Preferred to reset all colors
+      reset_scheme_to_default
+      # Color configurations
+      # set -g scheme_color_normal             normal
+      set -g scheme_color_command            $yellow
+      set -g scheme_color_quote              $orange
+      set -g scheme_color_redirection        $cyan
+      set -g scheme_color_end                $pink
+      set -g scheme_color_error              $red
+      set -g scheme_color_param              $foreground
+      set -g scheme_color_comment            $green
+      set -g scheme_color_operator           $cream
+      set -g scheme_color_escape             $orange
+      set -g scheme_color_cwd                $orange
+      set -g scheme_color_cwd_root           $red
+      set -g scheme_color_autosuggestion     $gray
+      set -g scheme_color_user               $cream
       set -g scheme_color_host               $foreground
       # set -g scheme_color_cancel             --reverse
       # set -g scheme_color_valid_path         --underline
