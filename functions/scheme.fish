@@ -23,6 +23,7 @@ function scheme \
     __scheme_set $scheme_name
       or return $status
   else if [ $subcommand = 'preview' ]
+    __scheme_preview $scheme_name
   else
     echo (set_color -o $fish_color_error)'Error'(set_color $fish_color_normal)': Unknown command: '(set_color $fish_color_error)$subcommand
     print_usage
