@@ -1,4 +1,4 @@
-function preview_prompt
+function __scheme_preview_prompt
   # user@host ~/foo>
   # user, normal, host, cwd, normal
   set_color normal
@@ -60,7 +60,7 @@ function __scheme_preview \
 
 
   # # This is a preview of `$scheme_name` scheme.
-  preview_prompt
+  __scheme_preview_prompt
   set_color normal
   set_color $scheme_color_comment
   if [ -z $scheme_name ]
@@ -72,7 +72,7 @@ function __scheme_preview \
 
   # echo foo\nbar > /tmp/baz &
   # command, param, quote, redirection, end
-  preview_prompt
+  __scheme_preview_prompt
   set_color normal
   set_color $scheme_color_command
   echo -n 'echo'
@@ -106,7 +106,7 @@ function __scheme_preview \
 
   # echo (cat /tmp/baz) | grep 'foo'
   # command, operator, command, param&valid_path, operator, end, command, quote
-  preview_prompt
+  __scheme_preview_prompt
   set_color normal
   set_color $scheme_color_command
   echo -n 'echo'
@@ -146,7 +146,7 @@ function __scheme_preview \
 
   # echo 'Error: invalid stri^C
   # command, error, normal&cancel
-  preview_prompt
+  __scheme_preview_prompt
   set_color normal
   set_color $scheme_color_command
   echo -n 'echo'
@@ -162,7 +162,7 @@ function __scheme_preview \
 
   # This an autosuggestion
   # command, normal&-r, autosuggestion
-  preview_prompt
+  __scheme_preview_prompt
   set_color normal
   set_color $scheme_color_command
   echo -n 'Th'

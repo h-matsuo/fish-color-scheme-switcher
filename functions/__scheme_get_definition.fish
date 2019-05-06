@@ -1,4 +1,4 @@
-function reset_scheme_to_default
+function __scheme_reset_to_default
   # Color values from: https://github.com/fish-shell/fish-shell/blob/82052a6cc9fa797070d8945130d45226d5cbc1c5/share/functions/__fish_config_interactive.fish#L51
   # normal
   set -g scheme_color_normal normal
@@ -77,7 +77,7 @@ function __scheme_get_definition \
   switch $scheme_name
 
     case 'default'
-      reset_scheme_to_default
+      __scheme_reset_to_default
 
     # https://draculatheme.com
     case 'dracula'
@@ -95,7 +95,7 @@ function __scheme_get_definition \
       set -l red            ff5555
       set -l yellow         f1fa8c
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $foreground
@@ -136,7 +136,7 @@ function __scheme_get_definition \
       set -l red            f92672
       set -l yellow         e6db74
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $cyan
@@ -185,7 +185,7 @@ function __scheme_get_definition \
       set -l cyan           2aa198
       set -l green          859900
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $blue
@@ -230,7 +230,7 @@ function __scheme_get_definition \
       set -l blue           4271ae
       set -l purple         8959a8
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $purple
@@ -275,7 +275,7 @@ function __scheme_get_definition \
       set -l blue           81a2be
       set -l purple         b294bb
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $purple
@@ -320,7 +320,7 @@ function __scheme_get_definition \
       set -l blue           7aa6da
       set -l purple         c397d8
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $purple
@@ -364,7 +364,7 @@ function __scheme_get_definition \
       set -l white          dfdfdf
       set -l gray           53606e
       # Preferred to reset all colors
-      reset_scheme_to_default
+      __scheme_reset_to_default
       # Color configurations
       # set -g scheme_color_normal             normal
       set -g scheme_color_command            $yellow
