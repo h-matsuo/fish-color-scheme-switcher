@@ -65,6 +65,10 @@ $ scheme ls | xargs -n1 -I {} fish -c 'scheme preview {} ; echo'
 $ echo 'scheme set dracula' >> "$HOME/.config/fish/config.fish"
 ```
 
+### Adding new color scheme
+
+See [CONTRIBUTING.md](https://github.com/h-matsuo/fish-color-scheme-switcher/blob/master/CONTRIBUTING.md).
+
 ## Limitations
 
 :warning: This plugin manages syntax highlighting color scheme only. Fish's plugins cannot affect other color settings such as color definitions in other fish themes, terminal's appearance / backgrounds, etc.
