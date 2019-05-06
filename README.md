@@ -1,14 +1,23 @@
-# fish-color-scheme-switcher
+<div align="center">
 
-[![Fish-shell Plugin](https://badgen.net/badge/fish-shell/plugin?icon=terminal)](https://fishshell.com/)
-[![License](https://badgen.net/github/license/h-matsuo/fish-color-scheme-switcher)](https://github.com/h-matsuo/fish-color-scheme-switcher/blob/master/LICENSE)
+  <img width="500px" src="https://user-images.githubusercontent.com/19528041/57216518-fef64300-702a-11e9-8c94-e2eb8663784d.jpg" alt="logo">
 
-Want to change fish's syntax highlighting color scheme?  
+  <h1>fish-color-scheme-switcher</h1>
 
+  <p>
+    Want to change fish's syntax highlighting color scheme?
+  </p>
 
-<div align=center>
-  <img width=500 src=https://user-images.githubusercontent.com/19528041/57193163-6e106080-6f73-11e9-9319-a687327f6c63.gif alt="Demo">
+  <p>
+    <a href="https://fishshell.com/"><img src="https://badgen.net/badge/fish-shell/plugin?icon=terminal" alt="fish-shell plugin"></a>
+    <a href="https://github.com/h-matsuo/fish-color-scheme-switcher/blob/master/LICENSE"><img src="https://badgen.net/github/license/h-matsuo/fish-color-scheme-switcher" alt="license"></a>
+  </p>
+
+  <img width="500px" src="https://user-images.githubusercontent.com/19528041/57193163-6e106080-6f73-11e9-9319-a687327f6c63.gif" alt="demo">
+
 </div>
+
+---
 
 ## Installation
 
@@ -27,7 +36,7 @@ $ omf reload
 
 ## Usage
 
-After installation, `scheme` command is available.
+`scheme` command is available after installation.
 
 ```sh
 $ scheme
@@ -49,13 +58,12 @@ To compare all available schemes, type the following command:
 $ scheme ls | xargs -n1 -I {} fish -c 'scheme preview {} ; echo'
 ```
 
-To change color scheme automatically every time you login, add to your `config.fish`:
+To change color scheme automatically every time you login, add the following to your `config.fish`:
 
 ```sh
 # Set color scheme to `Dracula` automatically
 echo 'scheme set dracula' >> "$HOME/.config/fish/config.fish"
 ```
-
 
 ## Limitations
 
