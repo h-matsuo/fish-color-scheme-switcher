@@ -52,17 +52,17 @@ Usage:
 
 ## Tips
 
-To compare all available schemes, type the following command:
+### Comparing all available schemes
 
 ```sh
 $ scheme ls | xargs -n1 -I {} fish -c 'scheme preview {} ; echo'
 ```
 
-To change color scheme automatically every time you login, add the following to your `config.fish`:
+### Saving your configurations
 
 ```sh
-# Set color scheme to `Dracula` automatically
-echo 'scheme set dracula' >> "$HOME/.config/fish/config.fish"
+# Set color scheme to `Dracula` automatically on new session
+$ echo 'scheme set dracula' >> "$HOME/.config/fish/config.fish"
 ```
 
 ## Limitations
