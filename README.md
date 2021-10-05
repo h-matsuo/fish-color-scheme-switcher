@@ -24,7 +24,7 @@
 ### With [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```sh
-$ fisher add h-matsuo/fish-color-scheme-switcher
+$ fisher install h-matsuo/fish-color-scheme-switcher
 ```
 
 ### With [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
