@@ -67,6 +67,7 @@ function __scheme_get_definition \
     echo 'dracula'
     echo 'monokai'
     echo 'solarized'
+    echo 'tokyonight'
     echo 'tomorrow'
     echo 'tomorrow-night'
     echo 'tomorrow-night-bright'
@@ -392,6 +393,40 @@ function __scheme_get_definition \
       # set -g scheme_pager_color_progress     brwhite --background=cyan
       # set -g scheme_pager_color_secondary
       # set -g scheme_color_history_current    --bold
+
+    case 'tokyonight'
+      # Color Palette
+      set -l foreground c0caf5
+      set -l selection 33467C
+      set -l comment 565f89
+      set -l red f7768e
+      set -l orange ff9e64
+      set -l yellow e0af68
+      set -l green 9ece6a
+      set -l purple 9d7cd8
+      set -l cyan 7dcfff
+      set -l pink bb9af7
+      __scheme_reset_to_default
+      # Syntax Highlighting Colors
+      set -g scheme_color_normal $foreground
+      set -g scheme_color_command $cyan
+      set -g scheme_color_keyword $pink
+      set -g scheme_color_quote $yellow
+      set -g scheme_color_redirection $pink
+      set -g scheme_color_end $orange
+      set -g scheme_color_error $red
+      set -g scheme_color_param $purple
+      set -g scheme_color_comment $comment
+      set -g scheme_color_selection --background=$selection
+      set -g scheme_color_search_match --background=$selection
+      set -g scheme_color_operator $green
+      set -g scheme_color_escape $pink
+    set -g fish_color_autosuggestion $comment
+      # Completion Pager Colors
+      set -g scheme_pager_color_progress $comment
+      set -g scheme_pager_color_prefix $cyan
+      set -g scheme_pager_color_completion $foreground
+      set -g scheme_pager_color_description $comment
 
     case '*'
       echo (set_color normal)(set_color $fish_color_error)(set_color -o)'Error:'(set_color normal)' '(set_color $fish_color_normal)'No such scheme available:'(set_color normal)' '(set_color $fish_color_error)$scheme_name(set_color normal)
