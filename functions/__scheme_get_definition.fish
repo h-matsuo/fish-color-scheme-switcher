@@ -63,6 +63,7 @@ function __scheme_get_definition \
 
   # If no scheme specified, print available scheme list
   if [ -z $scheme_name ]
+    echo 'catppuccin'
     echo 'default'
     echo 'dracula'
     echo 'monokai'
@@ -421,12 +422,54 @@ function __scheme_get_definition \
       set -g scheme_color_search_match --background=$selection
       set -g scheme_color_operator $green
       set -g scheme_color_escape $pink
-    set -g fish_color_autosuggestion $comment
+      set -g fish_color_autosuggestion $comment
       # Completion Pager Colors
       set -g scheme_pager_color_progress $comment
       set -g scheme_pager_color_prefix $cyan
       set -g scheme_pager_color_completion $foreground
       set -g scheme_pager_color_description $comment
+
+    # https://github.com/catppuccin/fish
+    case 'catppuccin'
+    #Color Palette
+    set -l foreground dadae8
+    set -l selection 3e4058
+    set -l teal bee4ed
+    set -l flamingo f2cecf
+    set -l magenta c6aae8
+    set -l pink e5b4e2
+    set -l red e38c8f
+    set -l peach f9c096
+    set -l green b1e3ad
+    set -l yellow ebddaa
+    set -l blue a4b9ef
+    set -l gray 6e6c7e
+    __scheme_reset_to_default
+    # Syntax Highlighting Colors
+    set -g scheme_color_normal $foreground
+    set -g scheme_color_command $blue
+    set -g scheme_color_param $flamingo
+    set -g scheme_color_keyword $red
+    set -g scheme_color_quote $green
+    set -g scheme_color_redirection $pink
+    set -g scheme_color_end $peach
+    set -g scheme_color_error $red
+    set -g scheme_color_gray $gray
+    set -g scheme_color_selection --background=$selection
+    set -g scheme_color_search_match --background=$selection
+    set -g scheme_color_operator $pink
+    set -g scheme_color_escape $flamingo
+    set -g scheme_color_autosuggestion $gray
+    set -g scheme_color_cancel $red
+    # Prompt
+    set -g scheme_color_cwd $yellow
+    set -g scheme_color_user $teal
+    set -g scheme_color_host $blue
+    # Completion Pager
+    set -g scheme_pager_color_progress $gray
+    set -g scheme_pager_color_prefix $pink
+    set -g scheme_pager_color_completion $foreground
+    set -g scheme_pager_color_description $gray
 
     case '*'
       echo (set_color normal)(set_color $fish_color_error)(set_color -o)'Error:'(set_color normal)' '(set_color $fish_color_normal)'No such scheme available:'(set_color normal)' '(set_color $fish_color_error)$scheme_name(set_color normal)
